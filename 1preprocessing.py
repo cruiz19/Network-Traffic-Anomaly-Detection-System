@@ -33,13 +33,19 @@ Y = df["Malicious"]
     # Y_train = correct answers for those training examples
     # X_test  = features we TEST the model with
     # Y_test  = correct answers used to check its predictions
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state = 42, stratify = Y)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.2, random_state = 42, stratify = Y)
+
+X_train.to_csv("data/processed/X_train.csv", index=False)
+X_test.to_csv("data/processed/X_test.csv", index=False)
+
+y_train.to_csv("data/processed/y_train.csv", index=False)
+y_test.to_csv("data/processed/y_test.csv", index=False)
 
 print("Training features:", X_train.shape)
 print("Testing features:", X_test.shape)
 
 print("\nTraining labels:")
-print(Y_train.value_counts())
+print(y_train.value_counts())
 
 print("\nTesting labels:")
-print(Y_test.value_counts())
+print(y_test.value_counts())
