@@ -35,7 +35,7 @@ print(classification_report(y_test, y_pred))
 
 #confusion matrix to get visual of data
 cm = confusion_matrix(y_test, y_pred)
-ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["BENIGN", "ATTACK"]).plot()
+# ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["BENIGN", "ATTACK"]).plot()
 labels = [["True Negative", "False Positive"], ["False Negative", "True Positive"]]
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["BENIGN", "ATTACK"])
 disp.plot(include_values=False)

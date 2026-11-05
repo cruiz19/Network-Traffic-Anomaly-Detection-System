@@ -29,10 +29,10 @@ Y = df["Malicious"]
 # print(Y.head())
 
 #split x and y and create four variables:
-    # X_train = features the model LEARNS from
-    # Y_train = correct answers for those training examples
-    # X_test  = features we TEST the model with
-    # Y_test  = correct answers used to check its predictions
+## X_train = features the model LEARNS from
+## Y_train = correct answers for those training examples
+## X_test  = features we TEST the model with
+## Y_test  = correct answers used to check its predictions
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.2, random_state = 42, stratify = Y)
 
 X_train.to_csv("data/processed/X_train.csv", index=False)
